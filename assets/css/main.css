@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+/*- Globals -*/
+
+html, body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'Cabin', sans-serif;
+  background-color: #ffffff;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container{
+  width:66%;
+  margin: auto;
+  overflow: hidden;
+}
+
+a{
+  text-decoration:none;
+}
+
+.b1{
+  border: none;
+  text-decoration: none;
+  font-family: 'Cabin', sans-serif;
+  outline: none;
+}
+
+/*- Content -*/
+
+/*- Header -*/
+
+header{
+  min-height: 80px;
+  padding-top: 20px;
+  z-index: 5;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+header #logo{
+  float:left;
+}
+
+header nav{
+  float:right;
+  padding-top: 20px;
+  padding-right: 15%;
+}
+
+header ul{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 30px 0 30px;
+}
+
+header a{
+  color: #8ba998;
+}
+
+/*- Showcase -*/
+
+#showcase{
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background: url(../img/showcase-underground-2.png);
+  display: table;
+  background-size: cover;
+  z-index: 1;
+  color: #dfddd3;
+  text-transform: uppercase;
+}
+
+h1{
+  padding-top: 33vh;
+  font-size: calc(38px + 1vw);
+  letter-spacing: 10px;
+  display: block;
+  text-align: center;
+}
+
+#tekst{
+  font-size: calc(12px + 0.5vw);
+  letter-spacing: 4px;
+  max-width: 550px;
+  text-align: center;
+  padding-bottom: 80px;
+  margin: auto;
+}
+
+#cta{
+  margin: auto;
+  display: block;
+  background-color: #886458;
+  height: 55px;
+  width: 300px;
+  z-index: 4;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #dfddd3;
+}
+
+/*- Oferta -*/
+
+#oferta{
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 550px;
+  padding-top: 45px;
+  color: #5c5b59;
+}
+
+h2{
+  color: #bab8b3;
+  font-size: 16pt;
+  letter-spacing: 3px;
+}
+
+h2 span{
+  color: #608b49;
+  font-size: 32pt;
+  letter-spacing: 4px;
+}
+
+.c1{
+  float:left;
+  margin-top: 30px;
+  width: 33%;
+  letter-spacing: 4px;
+}
+
+/*- Break #1 -*/
+
+#break1{
+  width: 100%;
+  height: 300px;
+  background: url(../img/break1.png);
+  background-size: cover;
+}
+
+/*- Kontakt -*/
+
+#kontakt{
+  color: #dcdbd4;
+  min-height: 700px;
+  padding-top: 50px;
+}
+
+#map{
+  background-color: #dcdbd4;
+  height: 450px;
+  width: 50%;
+  float:left;
+  margin-top: 25px;
+  color: #000;
+}
+
+#godziny{
+  width: 400px;
+  margin-top: 40px;
+  float: right;
+  margin-bottom: 30px;
+  margin-right: 125px;
+}
+
+#godziny h3{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  -ms-transform: translateX(-30px); /* IE 9 */
+  -webkit-transform: translateX(-30px); /* Safari */
+  transform: translateX(-30px);
+}
+
+#creds{
+  float: left;
+  margin-top: 15px;
+  margin-left: 70px;
+  font-size: 18pt;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#form1{
+  width: 550px;
+  float: right;
+  margin-right: 40px;
+}
+
+fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+form input{
+  color: #dcdbd4;
+  width: 60%;
+  margin-top: 8px;
+  height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Cabin', sans-serif;
+}
+
+input[type=text]{
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+
+input[name=tresc]{
+  height: 150px;
+}
+
+button[type=submit]{
+  height: 35px;
+  margin-top: 8px;
+  width: 61%;
+  background-color: #c3bfa3;
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 2px;
+}
+
+/*- Break #2 -*/
+
+#break2{
+  width: 100%;
+  height: 300px;
+  background: url(../img/break2.png);
+  background-size: cover;
+}
+
+/*- Footer -*/
+
+footer{
+  min-height: 60px;
+  color: #608b49;
+  font-size: 14pt;
+  text-align: center;
+  background: #ddd;
+  line-height: 1.5;
+}
+
+footer a{
+  color: #608b49;
+}
+
+footer span{
+  font-size: 8pt;
+}
