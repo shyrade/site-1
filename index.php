@@ -5,12 +5,15 @@
   <meta name="description" content="OPIS" >
   <meta name="keywords" content="TAGIt" >
   <meta name="author" content="Tymoteusz Kulpa" >
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+  <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
   <!-- Nawigacja --->
-  <header>
+  <header class="navbar">
     <div class="container">
       <span class="logo">
         <a href="http://www.ogrodyaurora.pl/"><img src="assets/img/####" alt="Ogrody Aurora"></a>
@@ -24,6 +27,41 @@
       </nav>
     </div>
   </header>
+
+  <script type="text/javascript">
+
+  $(window).scroll(function() {
+
+      if ($(window).scrollTop() > 100) {
+          $('.navbar').addClass('fade');
+      } else {
+          $('.navbar').removeClass('fade');
+      }
+  });
+
+
+  </script>
+
+  <div id="navresp">
+    <div class="container">
+      <span class="logo">
+        <a href="http://www.ogrodyaurora.pl/"><img src="assets/img/####" alt="Ogrody Aurora"></a>
+      </span>
+
+      <div id="burger">
+        <button type="button" name="button"></button>
+      </div>
+    </div>
+  </div>
+  <div id="burgermenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Oferta</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </div>
+
+
 <!-- Zawartość --->
 <section id="showcase">
   <div class="container">
@@ -106,6 +144,10 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQZTZ1PsRVUBV7oIqmpWtUvUi3zvWgDVA&callback=initMap">
       </script>
     </div>
+    <div id="creds">
+      ogrodyaurora@op.pl<br>
+      +48 690 027 755<br>
+    </div>
     </div>
     <div id="rightalign">
 
@@ -121,7 +163,7 @@
       niedziela:	   	ZAMKNIĘTE<br>
     </div>
     <div id="form1">
-      <form class="formularz" action="mailto:ogrodyaurora@op.pl" method="post" enctype="text/plain">
+      <form class="formularz" action="mailto:tymi223@gmail.com" method="post" enctype="text/plain">
         <fieldset>
           <input type="textbox" name="imie+nazwisko" value="Imię i nazwisko" onfocus="if (this.value=='Imię i nazwisko') this.value='';" onblur="if (this.value=='') this.value='Imię i nazwisko';"/><br>
           <input type="textbox" name="email" value="E-mail" onfocus="if (this.value=='E-mail') this.value='';" onblur="if (this.value=='') this.value='E-mail';"/><br>
@@ -131,10 +173,7 @@
       </form>
     </div>
     </div>
-    <div id="creds">
-      ogrodyaurora@op.pl<br>
-      +48 690 027 755<br>
-    </div>
+
   </div>
 </section>
 

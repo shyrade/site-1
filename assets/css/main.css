@@ -46,7 +46,7 @@ header{
   width: 100%;
 }
 
-header #logo{
+#logo{
   float:left;
 }
 
@@ -68,6 +68,45 @@ header li{
 }
 
 header a{
+  color: #8ba998;
+}
+
+#navresp{
+  display: none;
+  height: 70px;
+  padding-top: 15px;
+  z-index: 4;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+#burgermenu{
+  display: none;
+  height: 0px;
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  top: 70px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#burger{
+  float: right;
+}
+
+#burgermenu ul{
+  padding-top: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#burgermenu li{
+  padding-top: 60px;
+}
+
+#burgermenu a{
   color: #8ba998;
 }
 
@@ -122,6 +161,7 @@ h1{
   text-align: center;
   min-height: 550px;
   padding-top: 45px;
+  margin-bottom: 50px;
   color: #5c5b59;
 }
 
@@ -161,44 +201,70 @@ h2 span{
   padding-top: 50px;
 }
 
+#leftalign{
+  float: left;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+#rightalign{
+  float: right;
+  width: 48%;
+  margin-bottom: 30px;
+}
+
 #map{
+  display: flex;           /* establish flex container */
+  flex-direction: column;  /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center;     /* center items horizontally, in this case */
   background-color: #dcdbd4;
   height: 450px;
-  width: 50%;
-  float:left;
+  width: 95%;
   margin-top: 25px;
   color: #000;
 }
 
-#godziny{
-  width: 400px;
-  margin-top: 40px;
-  float: right;
-  margin-bottom: 30px;
-  margin-right: 125px;
-}
-
-#godziny h3{
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  -ms-transform: translateX(-30px); /* IE 9 */
-  -webkit-transform: translateX(-30px); /* Safari */
-  transform: translateX(-30px);
-}
-
 #creds{
-  float: left;
+  display: flex;           /* establish flex container */
+  flex-direction: column;  /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center;     /* center items horizontally, in this case */
   margin-top: 15px;
-  margin-left: 70px;
   font-size: 18pt;
   text-transform: uppercase;
   text-align: center;
 }
 
+#godziny{
+  display: flex;           /* establish flex container */
+  flex-direction: column;  /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center;     /* center items horizontally, in this case */
+  width: 100%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#godziny h3{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+/*  -ms-transform: translateX(-30px); /* IE 9 /*
+  -webkit-transform: translateX(-30px); /* Safari
+  transform: translateX(-30px); */
+}
+
 #form1{
-  width: 550px;
-  float: right;
-  margin-right: 40px;
+  display: flex;           /* establish flex container */
+  flex-direction: column;  /* make main axis vertical */
+  align-items: center;     /* center items horizontally, in this case */
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-right: 40px; */
 }
 
 fieldset{
@@ -209,9 +275,9 @@ fieldset{
 
 form input{
   color: #dcdbd4;
-  width: 60%;
   margin-top: 8px;
   height: 30px;
+  width: 300px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: 'Cabin', sans-serif;
@@ -233,7 +299,7 @@ input[name=tresc]{
 button[type=submit]{
   height: 35px;
   margin-top: 8px;
-  width: 61%;
+  width: 306px;
   background-color: #c3bfa3;
   color: #fff;
   font-family: 'Cabin', sans-serif;
@@ -256,7 +322,6 @@ footer{
   color: #608b49;
   font-size: 14pt;
   text-align: center;
-  background: #ddd;
   line-height: 1.5;
 }
 
@@ -266,4 +331,84 @@ footer a{
 
 footer span{
   font-size: 8pt;
+}
+
+/*- Media -*/
+
+@media (max-width: 975px) {
+  .container{
+    width: 75%;
+  }
+
+  #break1, #break2{
+    height: 200px;
+  }
+
+  header{
+    display: none;
+  }
+
+  #navresp{
+    display: block;
+  }
+
+  h1{
+    padding-top: 20vh;
+  }
+
+  #tekst{
+    padding-bottom: 25px;
+  }
+
+  .c1{
+    width: 100%;
+  }
+
+  #leftalign{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #rightalign{
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+  }
+
+  #map{
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+  }
+
+  form input{
+    min-width: 220px;
+    width: 100%;
+  }
+
+  button[type=submit]{
+    margin-left: 3px;
+    width:100%;
+  }
+
+  footer{
+    min-height: 75px;
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  #cta{
+    font-size: 16px;
+    text-align: left;
+    padding-left: 85px;
+  }
+}
+
+@media (max-width: 350px) {
+  #cta{
+    font-size: 16px;
+    text-align: left;
+    padding-left: 70px;
+  }
 }
