@@ -5,7 +5,7 @@
   <meta name="description" content="OPIS" >
   <meta name="keywords" content="TAGI" >
   <meta name="author" content="Tymoteusz Kulpa" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
 
   <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
