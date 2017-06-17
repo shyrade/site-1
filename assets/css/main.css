@@ -50,8 +50,7 @@ a{
 /*- Header -*/
 
 header{
-  height: 80px;
-  padding-top: 20px;
+  height: 100px;
   z-index: 5;
   position: fixed;
   background-color: #ffffff;
@@ -64,8 +63,17 @@ header{
   transition: height 0.3s;
 }
 
-#logo{
+.logo{
   float:left;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.logo img{
+  height: 100px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -75,7 +83,7 @@ header{
 
 header nav{
   float:right;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-right: 15%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -113,11 +121,15 @@ header nav a:active {
 }
 
 header.smaller {
-    height: 60px;
+    height: 80px;
+}
+
+header.smaller .logo img{
+  height: 80px;
 }
 
 header.smaller nav {
-    padding-top: 8px;
+    padding-top: 30px;
 }
 
 #navresp{
@@ -126,7 +138,16 @@ header.smaller nav {
   z-index: 4;
   position: fixed;
   background-color: #ffffff;
-  width: 100vw;
+  width: 100%;
+}
+
+#logo{
+  margin-left: 12px;
+}
+
+#logo img{
+  height: 50px;
+  margin-top: 11px;
 }
 
 #navresp #logo,#burger{
@@ -138,7 +159,7 @@ header.smaller nav {
   width: 100%;
   z-index: 4;
   position: fixed;
-  top: 60px;
+  top: 65px;
   background-color: #ffffff;
   text-align: center;
   animation-name: menuopen;
@@ -185,7 +206,7 @@ header.smaller nav {
 
 #showcase{
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: url(../img/showcase-underground-2.png);
   display: table;
   background-size: cover;
@@ -510,7 +531,7 @@ footer span{
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 50%;
   background: #8ba998;
   opacity: 1;
