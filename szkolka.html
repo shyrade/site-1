@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" >
+
+  <meta name="description" content="Ogrody Aurora zapewniają usługi w postaci tworzenia, kosmetyki oraz opieki nad ogrodami na terenie całej Polski." >
+  <meta name="keywords" content="ogrody, ogrody aurora, zakładanie trawników, wywóz liści, pielęgnacja ogrodów, aranżacja zieleni, szkółka, tarnów, małopolska, sklep, rośliny" >
+
+  <meta name="author" content="Tymoteusz nyiss Kulpa" >
+  <meta name="copyright" content="Copyright 2017 Ogrody Aurora">
+  <meta name="publisher" content="Ogrody Aurora">
+  <meta name="company" content="Ogrody Aurora">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-ico; charset=binary">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-ico; charset=binary">
+
+  <title>Szkółka Aurora</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script src="assets/js/classie/classie.js"></script>
+
+</head>
+<body>
+  <!-- Nawigacja -->
+  <header>
+    <div class="container">
+      <span class="logo">
+        <img src="assets/img/logo.gif" alt="Ogrody Aurora">
+      </span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#showcase-szkolka">Szkółka</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <a href="#showcase-szkolka">
+    <div id="scrollUp"></div>
+  </a>
+
+  <script type="text/javascript">
+
+  function init() {
+      window.addEventListener('scroll', function(e){
+          var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+              shrinkOn = 20,
+              header = document.querySelector("header");
+          if (distanceY > shrinkOn) {
+              classie.add(header,"smaller");
+              document.getElementById("scrollUp").style.opacity = "0.6";
+          } else {
+              if (classie.has(header,"smaller")) {
+                  classie.remove(header,"smaller");
+                  document.getElementById("scrollUp").style.opacity = "0";
+              }
+          }
+      });
+  }
+
+  window.onload = init();
+
+  </script>
+
+  <div id="navresp">
+      <span id="logo">
+        <img src="assets/img/logo.gif" alt="Ogrody Aurora">
+      </span>
+
+      <div id="burger">
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  </div>
+
+  <div id="burgermenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#showcase-szkolka">Szkółka</a></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+    $('#nav-icon').click(function(){
+      $(this).toggleClass('open');
+      if (this.classList.contains("open")) {
+        document.getElementById("burgermenu").style.display = "block";
+        document.getElementById("burgermenu").style.animationName = "menuopen";
+        $('body').addClass("overflowHidden");
+        $('#showcase, #cta, #szkolka, #break4, footer').addClass("blur");
+      }else {
+        document.getElementById("burgermenu").style.animationName = "menuclose";
+        $('body').removeClass("overflowHidden");
+        $('#showcase, #cta, #szkolka, #break4, footer').removeClass("blur");
+        setTimeout(function(){ document.getElementById("burgermenu").style.display = "none"; }, 600);
+      }
+    });
+    });
+
+    const navIconClasses = document.getElementById("nav-icon").classList;
+
+    $("#burgermenu").on("click", "li", function () {
+        navIconClasses.remove('open')
+        document.getElementById("burgermenu").style.animationName = "menuclose";
+        $('body').removeClass("overflowHidden");
+        $('#showcase, #cta, #szkolka, #break4, footer').removeClass("blur");
+        setTimeout(function(){ document.getElementById("burgermenu").style.display = "none"; }, 600);
+    });
+
+    </script>
+
+<!-- Zawartość -->
+
+<section id="showcase-szkolka">
+  <div class="container">
+    <h1>Szkółka Aurora</h1>
+    <div id="tekst-1">
+      Materiał roślinny najwyższej jakości<br>
+
+    </div>
+    <a href="#szkolka" id="cta" class="b1 szkolka" >
+      Czytaj dalej
+    </a>
+  </div>
+</section>
+
+<section id="szkolka">
+  <div class="container">
+    <h2>Szkółka<br><span class="burgundy">Aurora</span></h2>
+    <div id="zawartosc">
+      <span>Przy siedzibie firmy, do Państwa dyspozycji, otworzyliśmy szkółkę krzewów ozdobnych. </span><br>
+      <span>Posiadamy <strong>największy</strong> wybór bylin oraz  traw ozdobnych na terenie Tarnowa.</span><br><br>
+
+      <div class="left">
+        <span>Szkółka zajmuje się produkcją materiału ozdobnego,
+              iglastego i liściastego przeznaczonego do nasadzeń w ogrodach,
+              na działkach czy terenach rekreacyjnych i miejskich.
+        </span><br><br>
+
+        <div class="leftInnerTextCenter">
+          <span>Polecamy, w szerokim asortymencie: <br>
+            <ul>
+              <li>drzewa i krzewy iglaste,</li>
+              <li>drzewa i krzewy liściaste,</li>
+              <li>szczepione formy pienne,</li>
+              <li>trawy ozdobne,</li>
+              <li>wiele innych np. krzewy formowane (spirale, kule itp.)</li>
+            </ul>
+          </span><br><br>
+        </div>
+
+        <span>Dokładamy <strong>ogromnych starań</strong> aby nasz materiał był najwyższej jakości -
+              jednocześnie corocznie zwiększając asortyment -
+              wychodząc naprzeciw wymaganiom naszych klientów.
+        </span><br><br>
+
+        <span>Dużą część produkcji obejmują rośliny w pojemnikach,
+              dzięki czemu okres nasadzeń oraz sprzedaż możliwa jest w ciągu całego okresu wegetacyjnego
+              (od wczesnej wiosny do późnej jesieni).
+        </span><br><br>
+
+        <span>Naszym celem jest zaspokojenie potrzeb klienta, <br>oraz jego satysfakcja.<br>
+              Zapraszamy do odwiedzenia szkółki i zapoznania się z proponowaną ofertą.
+        </span><br><br>
+      </div>
+
+      <div class="right">
+        <div id="imgInsert2">
+          <div id="modal" class="modal">
+            <img class="modal-content" id="img02" src="assets/img/hydrotrawa.jpg">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+
+$(document).ready(function(){
+  var divSameHeight = setInterval(function() {
+    if (window.innerWidth < 975) {
+      clearInterval();
+    }else {
+      $("#imgInsert2").height($(".left").height());
+    }
+  }, 100);
+
+  var modal = document.getElementById('modal');
+  var body = document.getElementsByTagName("body")[0];
+  var img = document.getElementById('imgInsert2');
+
+  img.onclick = function(){
+      modal.style.display = "block";
+      classie.add(body,"overflowHidden");
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        classie.remove(body,"overflowHidden")
+    }
+  }
+
+});
+
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+      document.getElementById('modal').style.display = "none";
+      $('body').removeClass("overflowHidden");
+    }
+});
+
+</script>
+
+<section id="break4">
+  <!-- IMG#4 -->
+  <h6>Break4</h6>
+</section>
+
+<!-- Stopka -->
+    <footer>
+      OGRODY AURORA 2017-<script>document.write(new Date().getFullYear())</script>&reg; <br>
+      <span>DESIGN &amp; CODE: Tymoteusz 'nyiss' Kulpa</span>
+    </footer>
+
+  <script>
+
+    var offset;
+
+    if (window.innerWidth > 975) {
+      offset = 75;
+    }else {
+      offset = 65;
+    }
+
+    $('a').click(function(event) {
+        var id = $(this).attr("href");
+        var target = $(id).offset().top - offset;
+        $('html, body').animate({
+            scrollTop: target
+        }, 500);
+        event.preventDefault();
+    });
+
+  </script>
+
+</body>
+</html>

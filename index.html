@@ -4,7 +4,7 @@
   <meta charset="UTF-8" >
 
   <meta name="description" content="Ogrody Aurora zapewniają usługi w postaci tworzenia, kosmetyki oraz opieki nad ogrodami na terenie całej Polski." >
-  <meta name="keywords" content="ogrody, ogrody aurora, zakładanie trawników, wywóz liści, pielęgnacja ogrodów, aranżacja zieleni" >
+  <meta name="keywords" content="ogrody, ogrody aurora, zakładanie trawników, wywóz liści, pielęgnacja ogrodów, aranżacja zieleni, szkółka, tarnów, małopolska, sklep, rośliny" >
 
   <meta name="author" content="Tymoteusz nyiss Kulpa" >
   <meta name="copyright" content="Copyright 2017 Ogrody Aurora">
@@ -36,10 +36,15 @@
           <li><a href="#showcase">Home</a></li>
           <li><a href="#oferta">Oferta</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="szkolka.html">Szkółka</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <a href="#showcase">
+    <div id="scrollUp"></div>
+  </a>
 
   <script type="text/javascript">
 
@@ -50,9 +55,11 @@
               header = document.querySelector("header");
           if (distanceY > shrinkOn) {
               classie.add(header,"smaller");
+              document.getElementById("scrollUp").style.opacity = "0.6";
           } else {
               if (classie.has(header,"smaller")) {
                   classie.remove(header,"smaller");
+                  document.getElementById("scrollUp").style.opacity = "0";
               }
           }
       });
@@ -84,6 +91,7 @@
       <li><a href="#showcase">Home</a></li>
       <li><a href="#oferta">Oferta</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="szkolka.html">Szkółka</a></li>
     </ul>
   </div>
 
@@ -96,11 +104,11 @@
         document.getElementById("burgermenu").style.display = "block";
         document.getElementById("burgermenu").style.animationName = "menuopen";
         $('body').addClass("overflowHidden");
-        $('#showcase, #oferta, #break1, #kontakt, #break2, footer').addClass("blur");
+        $('#showcase, #opis, #break1, #oferta, #break2, #kontakt, #break3, footer').addClass("blur");
       }else {
         document.getElementById("burgermenu").style.animationName = "menuclose";
         $('body').removeClass("overflowHidden");
-        $('#showcase, #oferta, #break1, #kontakt, #break2, footer').removeClass("blur");
+        $('#showcase, #opis, #break1, #oferta, #break2, #kontakt, #break3, footer').removeClass("blur");
         setTimeout(function(){ document.getElementById("burgermenu").style.display = "none"; }, 600);
       }
     });
@@ -108,21 +116,11 @@
 
     const navIconClasses = document.getElementById("nav-icon").classList;
 
-  /*  $(document).click(function(event) {
-    if(!$(event.target).closest('#burgermenu').length) {
-        if(navIconClasses.contains("open")) {
-          document.getElementById("burgermenu").style.animationName = "menuclose";
-          $('body').removeClass("overflowHidden");
-          $('.content').removeClass("blur");
-          setTimeout(function(){ document.getElementById("burgermenu").style.display = "none"; }, 600);
-      }
-    })*/
-
     $("#burgermenu").on("click", "li", function () {
         navIconClasses.remove('open')
         document.getElementById("burgermenu").style.animationName = "menuclose";
         $('body').removeClass("overflowHidden");
-        $('#showcase, #oferta, #break1, #kontakt, #break2, footer').removeClass("blur");
+        $('#showcase, #opis, #break1, #oferta, #break2, #kontakt, #break3, footer').removeClass("blur");
         setTimeout(function(){ document.getElementById("burgermenu").style.display = "none"; }, 600);
     });
 
@@ -136,14 +134,120 @@
       Zajmujemy się profesjonalną aranżacją, projektowaniem<br>
       oraz zakładaniem ogrodów
     </div>
-    <a href="#oferta" id="cta" class="b1" >
+    <a href="#opis" id="cta" class="b1 ogrody" >
       Sprawdź nas
     </a>
   </div>
 </section>
+
+<section id="opis">
+  <div class="container">
+    <h3></h3>
+
+    <div class="left">
+
+      <span>
+        Świadczymy <strong>profesjonalne usługi ogrodnicze</strong>  na terenie Tarnowa i okolic,<br>
+        jak również pojedyncze zlecenia na terenie całej polski, skierowane do osób prywatnych,<br>
+        firm oraz instytucji publicznych chcących zagospodarować zieloną przestrzeń.<br><br>
+      </span>
+
+      <div class="topSpace">
+        <span>
+          Zapewniamy <strong>kompleksową obsługę</strong> obejmującą zarówno projekt i wykonanie ogrodów, <br>
+          jak późniejszy serwis wykonanej inwestycji. <br><br>
+        </span>
+      </div>
+
+      <div class="topSpace">
+        <span>
+          Na terenie <strong>Tarnowa</strong> i okolic działamy od 6 lat. <br>
+          Umożliwiamy realizację najbardziej wyszukanych projektów zieleni.<br><br>
+        </span>
+      </div>
+
+      <div class="topSpace">
+        <div class="leftInnerTextCenter">
+          <span>
+            Zajmujemy się świadczeniem usług w zakresie:<br>
+            <strong>
+              <ul>
+                <li>Projektowania i zakładania zieleni</li>
+                <li>Sprzedaży detalicznej i hurtowej roślinności ozdobnej</li>
+                <li>Pielęgnacji zieleni</li>
+              </ul>
+            </strong>
+          </span>
+        </div>
+      </div><br>
+
+      <div class="topSpace">
+        <span>
+          Prace wykonujemy w <strong>krótkich i ustalonych</strong> terminach, <br>
+          a ich zakres ustalamy osobiście na miejscu według <strong>naszego projektu</strong>, lub <strong>pomysłu klienta</strong>. <br>
+          Zakładając tereny zieleni bazujemy na <strong>własnej roślinności</strong>.<br>
+          Nasze realizacje wykonywane są <strong>terminowo i solidnie</strong>.
+        </span>
+      </div>
+
+  </div>
+
+  <div class="right">
+    <div id="imgInsert1">
+      <div id="modal" class="modal" style="display: none;" >
+        <img class="modal-content" id="img01" src="assets/img/hydrotrawa.jpg">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+
+$(document).ready(function(){
+  var divSameHeight = setInterval(function() {
+    if (window.innerWidth < 975) {
+      clearInterval();
+    }else {
+      $("#imgInsert1").height($(".left").height());
+    }
+  }, 100);
+
+  var modal = document.getElementById('modal');
+  var body = document.getElementsByTagName("body")[0];
+  var img = document.getElementById('imgInsert1');
+
+  img.onclick = function(){
+      modal.style.display = "block";
+      classie.add(body,"overflowHidden");
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        classie.remove(body,"overflowHidden")
+    }
+  }
+
+});
+
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+      document.getElementById('modal').style.display = "none";
+      $('body').removeClass("overflowHidden");
+    }
+});
+
+</script>
+
+<section id="break1">
+  <!-- IMG#1 -->
+  <h6>Break1</h6>
+</section>
+
 <section id="oferta">
   <div class="container">
-    <h2>Ogrody<br><span>Aurora</span></h2>
+    <h2>Ogrody<br><span class="green">Aurora</span></h2>
     <div id="tworzenie" class="c1">
       <h3>Tworzenie</h3><br>
       <ul>
@@ -178,10 +282,10 @@
   </div>
 </section>
 
-  <section id="break1">
-    <!-- IMG#1 -->
-    <h6>Break1</h6>
-  </section>
+<section id="break2">
+  <!-- IMG#2 -->
+  <h6>Break2</h6>
+</section>
 
 <section id="kontakt">
   <div class="container">
@@ -226,11 +330,11 @@
       środa:			    07:00 - 18:00<br>
       czwartek:		    07:00 - 18:00<br>
       piątek:			    07:00 - 18:00<br>
-      sobota:			    ZAMKNIĘTE<br>
+      sobota:			    08:00 - 14:00<br>
       niedziela:	   	ZAMKNIĘTE<br>
     </div>
     <div id="form1">
-      <form class="formularz" action="mailto:tymi223@gmail.com" method="post" enctype="text/plain">
+      <form class="formularz" action="mailto:ogrodyaurora@o2.pl" method="post" enctype="text/plain">
         <fieldset>
           <input type="text" name="imie+nazwisko" value="Imię i nazwisko" onfocus="if (this.value=='Imię i nazwisko') this.value='';" onblur="if (this.value=='') this.value='Imię i nazwisko';"/><br>
           <input type="email" name="email" value="E-mail" onfocus="if (this.value=='E-mail') this.value='';" onblur="if (this.value=='') this.value='E-mail';"/><br>
@@ -244,10 +348,10 @@
   </div>
 </section>
 
-  <section id="break2">
-    <!-- IMG#2 -->
-    <h6>Break2</h6>
-  </section>
+<section id="break3">
+  <!-- IMG#3 -->
+  <h6>Break3</h6>
+</section>
 
 <!-- Stopka -->
     <footer>
@@ -260,7 +364,7 @@
     var offset;
 
     if (window.innerWidth > 975) {
-      offset = 72;
+      offset = 75;
     }else {
       offset = 65;
     }

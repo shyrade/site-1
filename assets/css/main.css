@@ -49,6 +49,42 @@ h6{
   display: none;
 }
 
+
+.left{
+  width: 55%;
+  float: left;
+  text-align: center;
+  margin-right: 5%;
+}
+
+.right{
+  width: 40%;
+  float: right;
+}
+
+.left, .right{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.leftInnerTextCenter{
+  text-align: center;
+}
+
+.topSpace{
+  margin-top: 20px;
+}
+
+.green{
+  color: #608b49;
+}
+
+.burgundy{
+  color: #2f1d1a;
+}
+
 /*- Content -*/
 
 /*- Header -*/
@@ -155,7 +191,7 @@ header.smaller nav {
           animation-name: menuopen;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  height: 258px;
+  height: 325px;
 }
 
 #burgermenu ul{
@@ -210,12 +246,12 @@ h1{
   text-align: center;
 }
 
-#tekst{
+#tekst, #tekst-1{
   font-size: calc(12px + 0.5vw);
   letter-spacing: 4px;
   max-width: 550px;
   text-align: center;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   margin: auto;
 }
 
@@ -223,7 +259,6 @@ h1{
   line-height: 55px;
   margin: auto;
   display: block;
-  background-color: #886458;
   height: 55px;
   width: 300px;
   z-index: 4;
@@ -231,6 +266,100 @@ h1{
   font-size: 18px;
   text-transform: uppercase;
   color: #dfddd3;
+}
+
+.ogrody{
+    background-color: #886458;
+}
+
+/*- ScrollUp -*/
+
+#scrollUp{
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  height: 36px;
+  width: 60px;
+  position: fixed;
+  right: 75px;
+  bottom: 75px;
+  z-index: 999;
+  background: url(../img/scrollUp.png);
+  background-size: cover;
+}
+
+/*- Opis -*/
+
+#opis{
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 550px;
+  padding-top: 45px;
+  margin-bottom: 50px;
+  color: #5c5b59;
+  letter-spacing: 2px;
+  line-height: 160%;
+}
+
+#imgInsert1{
+  width: 90%;
+  margin-left: 10%;
+  background: url(../img/hydrotrawa.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  height: 80%;
+  max-width: 80%
+}
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+@media only screen and (max-width: 975px){
+  .modal-content {
+      width: 100%;
+  }
+}
+
+/*- Break1 -*/
+
+#break1{
+  width: 100%;
+  height: 300px;
+  background: url(../img/break1.png);
+  background-size: cover;
 }
 
 /*- Oferta -*/
@@ -252,7 +381,6 @@ h2{
 }
 
 h2 span{
-  color: #608b49;
   font-size: 32pt;
   letter-spacing: 4px;
 }
@@ -272,12 +400,12 @@ h2 span{
   margin-bottom: 25px;
 }
 
-/*- Break #1 -*/
+/*- Break #2 -*/
 
-#break1{
+#break2{
   width: 100%;
   height: 300px;
-  background: url(../img/break1.png);
+  background: url(../img/break2.png);
   background-size: cover;
 }
 
@@ -432,12 +560,60 @@ button[type=submit]{
   letter-spacing: 2px;
 }
 
-/*- Break #2 -*/
+/*- Break #3 -*/
 
-#break2{
+#break3{
   width: 100%;
   height: 300px;
-  background: url(../img/break2.png);
+  background: url(../img/break3.png);
+  background-size: cover;
+}
+
+/*- Szkólka -*/
+
+#showcase-szkolka{
+  height: 100vh;
+  width: 100%;
+  background: url(../img/showcase-szkolka-underground-3.png);
+  display: table;
+  background-size: cover;
+  z-index: 1;
+  color: #dfddd3;
+  text-transform: uppercase;
+}
+
+.szkolka{
+  background-color: #2f1d1a;
+}
+
+#szkolka{
+  padding-top: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #5c5b59;
+  margin-bottom: 30px;
+}
+
+#zawartosc{
+  margin-top: 45px;
+}
+
+#imgInsert2{
+  width: 90%;
+  margin-left: 10%;
+  background: url(../img/hydrotrawa.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*- Break #4 -*/
+
+#break4{
+  width: 100%;
+  height: 300px;
+  background: url(../img/break4.png);
   background-size: cover;
 }
 
@@ -466,11 +642,37 @@ footer span{
     width: 75%;
   }
 
+  #imgInsert1{
+    margin: 0;
+    width: 100%;
+    height: 350px;
+  }
+
+  #imgInsert2{
+    margin: 0;
+    width: 100%;
+    height: 350px;
+  }
+
+  .modal-content{
+    height: auto;
+    max-width: 80%
+  }
+
+  #scrollUp{
+    height: 0;
+    width: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+
   #cta{
     width: auto;
   }
 
-  #break1, #break2{
+  #break1, #break2, #break3, #break4{
     height: 200px;
   }
 
@@ -492,6 +694,16 @@ footer span{
 
   #tekst{
     padding-bottom: 25px;
+  }
+
+  #tekst-1{
+    padding-bottom: 60px;
+  }
+
+  .left, .right{
+    display: block;
+    float: none;
+    width: 100%;
   }
 
   h2{
@@ -547,11 +759,11 @@ footer span{
       opacity: 0;
     }
     60%{
-      height: 285px;
+      height: 360px;
       opacity: 1;
     }
     100%{
-      height: 258px;
+      height: 325px;
       opacity: 1;
     }
 }
@@ -562,18 +774,18 @@ footer span{
       opacity: 0;
     }
     60%{
-      height: 285px;
+      height: 360px;
       opacity: 1;
     }
     100%{
-      height: 258px;
+      height: 325px;
       opacity: 1;
     }
 }
 
 @-webkit-keyframes menuclose {
     0%{
-      height: 258px;
+      height: 325px;
     }
     99%{
       height: 0;
@@ -585,7 +797,7 @@ footer span{
 
 @keyframes menuclose {
     0%{
-      height: 258px;
+      height: 325px;
     }
     99%{
       height: 0;
