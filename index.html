@@ -334,7 +334,7 @@ $(document).on('keyup',function(evt) {
       niedziela:	   	ZAMKNIĘTE<br>
     </div>
     <div id="form1">
-      <form class="formularz" action="assets/php/mail.php" method="post" enctype="text/plain">
+      <form class="formularz" action="assets/php/mail.php" method="post">
         <fieldset>
           <input type="text" name="name" value="Imię i nazwisko" onfocus="if (this.value=='Imię i nazwisko') this.value='';" onblur="if (this.value=='') this.value='Imię i nazwisko';"/><br>
           <input type="email" name="email" value="E-mail" onfocus="if (this.value=='E-mail') this.value='';" onblur="if (this.value=='') this.value='E-mail';"/><br>
@@ -360,6 +360,19 @@ $(document).on('keyup',function(evt) {
     </footer>
 
   <script>
+
+    $('.formularz').submit(function(event){
+      event.preventDefault();
+      $.ajax({
+            url: 'assets/php/mail.php',
+            type: 'post',
+            dataType: 'json',
+            data: $('.formularz').serialize(),
+            success: function(serverResponse) {
+                       //... do something with the server Response...
+                     }
+        });
+    });
 
     var offset;
 
