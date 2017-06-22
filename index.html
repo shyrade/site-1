@@ -334,13 +334,13 @@ $(document).on('keyup',function(evt) {
       niedziela:	   	ZAMKNIĘTE<br>
     </div>
     <div id="form1">
-      <form class="formularz" action="mailto:ogrodyaurora@o2.pl" method="post" enctype="text/plain">
+      <form class="formularz" action="assets/php/mail.php" method="post" enctype="text/plain">
         <fieldset>
-          <input type="text" name="imie+nazwisko" value="Imię i nazwisko" onfocus="if (this.value=='Imię i nazwisko') this.value='';" onblur="if (this.value=='') this.value='Imię i nazwisko';"/><br>
+          <input type="text" name="name" value="Imię i nazwisko" onfocus="if (this.value=='Imię i nazwisko') this.value='';" onblur="if (this.value=='') this.value='Imię i nazwisko';"/><br>
           <input type="email" name="email" value="E-mail" onfocus="if (this.value=='E-mail') this.value='';" onblur="if (this.value=='') this.value='E-mail';"/><br>
         </fieldset>
-        <input type="text" name="tresc" value="Treść" onfocus="if (this.value=='Treść') this.value='';" onblur="if (this.value=='') this.value='Treść';"/><br>
-        <button class="b1" type="submit">WYŚLIJ</button>
+        <input type="text" name="body" value="Treść" onfocus="if (this.value=='Treść') this.value='';" onblur="if (this.value=='') this.value='Treść';"/><br>
+        <button class="b1" type="submit" name="submit">WYŚLIJ</button>
       </form>
     </div>
     </div>

@@ -546,7 +546,7 @@ input[type=email]:focus {
     border: 1px solid #555;
 }
 
-input[name=tresc]{
+input[name=body]{
   height: 150px;
 }
 
@@ -574,7 +574,7 @@ button[type=submit]{
 #showcase-szkolka{
   height: 100vh;
   width: 100%;
-  background: url(../img/showcase-szkolka-underground-3.png);
+  background: url(../img/showcase-szkolka-underground.png);
   display: table;
   background-size: cover;
   z-index: 1;
@@ -602,7 +602,7 @@ button[type=submit]{
 #imgInsert2{
   width: 90%;
   margin-left: 10%;
-  background: url(../img/hydrotrawa.jpg);
+  background: url(../img/szkolka.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
